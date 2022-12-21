@@ -20,7 +20,7 @@
 
 typedef struct ifs_ele{
 	
-	int Index;
+	int pIndex;
 	int age;
 	int time;
 	int place_t[N_HISTORY];
@@ -49,6 +49,7 @@ int main(int argc, const char * argv[]) {
     }
     
     fp = fopen("patientInfo_sample.txt","r");
+    
     if (fp == NULL)
     {
         printf("[ERROR] Failed to open database file!! (%s)\n", argv[1]);
@@ -56,14 +57,16 @@ int main(int argc, const char * argv[]) {
     }
     
     //1-2. loading each patient informations
-    while(!feof(fp)){
-    	fscanf(fp,"%d%d%d",&ifs1[i].Index,&ifs1[i].age,&ifs1[i].time);
-    	i++;
-    	if(feof(fp))break;
+    while(3==fscanf(fp,"%d%d%d",ifs1.pIndex,ifs1.age,ifs1.time)){
+    	
+    	for
+    		fscanf(i=0;i<place_t;i++)
+    		
+    		ifct_element = ifctele_genElement(index,age,...);
+			
+			ifctdb_addTail(ifct_element);
 	}
-	for(i=0;i<Index;i++){
-		printf("%d%d%d\n",i+1,ifs1[i].Index,ifs1[i].age,ifs[i].time);
-	}
+	
     
     //1-3. FILE pointer close
     fclose(fp);
@@ -90,7 +93,8 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case MENU_PATIENT:
-                
+               
+               
                 break;
                 
             case MENU_PLACE:
